@@ -1,0 +1,47 @@
+<div>
+  <nav class="navbar">
+    <div class="left-group">
+      <h1>Menu</h1>
+      <div class="user-name-with-dot">
+        <span class="red-dot"></span>
+        <h1>User Name</h1>
+      </div>
+    </div>
+    <h1 style="margin-right: 33%">Sales Report</h1>
+  </nav>
+
+  <p style="text-align: center; font-weight: bold;">Sales by month for:</p>
+  <div class="selects">
+    <label>
+      Category:
+      <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+        @for (cat of categories; track cat) {
+          <option [value]="cat">{{ cat }}</option>
+        }
+      </select>
+    </label>
+
+    <label>
+      Product:
+      <select [(ngModel)]="selectedProduct" (change)="onProductChange()">
+        @for (prod of products; track prod) {
+          <option [value]="prod">{{ prod }}</option>
+        }
+      </select>
+    </label>
+
+    <label>
+      Brand:
+      <select [(ngModel)]=selectedBrand (change)="onBrandChange()">
+        @for (brand of brands; track brand) {
+          <option [value]="brand">{{ brand }}</option>
+        }
+      </select>
+    </label>
+  </div>
+  <canvas baseChart
+          [type]="chartType"
+          [data]="{ labels: chartLabels, datasets: chartData }"
+          [options]="chartOptions">
+  </canvas>
+</div>

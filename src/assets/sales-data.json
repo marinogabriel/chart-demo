@@ -1,0 +1,22 @@
+{
+  "Comida": {
+    "Fruta": {
+      "Frutas2": [100, 200, 150, 300],
+      "FrutasDelSol": [80, 160, 120, 250]
+    },
+    "Verdura": {
+      "VerdeMax": [90, 170, 130, 260],
+      "Naturales": [95, 180, 140, 280]
+    }
+  },
+  "Bebida": {
+    "Suco": {
+      "SucosMais": [120, 220, 180, 320],
+      "BebFrut": [130, 240, 190, 340]
+    },
+    "Refrigerante": {
+      "GaseosasTop": [110, 210, 160, 310],
+      "RefriBoom": [125, 230, 170, 330]
+    }
+  }
+}
